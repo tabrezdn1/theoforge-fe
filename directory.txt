@@ -1,0 +1,31 @@
+THEOFORGE-FE-1/
+├── node_modules/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AuthForm.tsx
+│   │   ├── ChatBox.tsx
+│   │   ├── Dashboard.tsx
+│   │   ├── GuestsTable.tsx
+│   │   ├── UsersTable.tsx
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .dockerignore
+├── .gitignore
+├── directory.txt
+├── docker-compose.yml
+├── dockerfile
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
