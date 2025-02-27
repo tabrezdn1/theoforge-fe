@@ -66,17 +66,17 @@ export function AuthForm({ type }: AuthFormProps) {
           </Typography>
         </div>
 
-        <Card className="w-full">
+        <Card className="w-full rounded-2xl shadow-lg">
           <CardHeader
             color="teal"
-            className="mb-4 grid h-28 place-items-center"
+            className="mb-0 flex justify-center items-center h-20 rounded-t-2xl"
           >
-            <Typography variant="h3" color="white">
+            <Typography variant="h3" color="white" className="font-bold text-2xl">
               {type === 'login' ? 'Welcome Back' : 'Create Account'}
             </Typography>
           </CardHeader>
 
-          <CardBody className="flex flex-col gap-6">
+          <CardBody className="flex flex-col gap-6 p-6">
             {error && (
               <Alert
                 color="red"
@@ -88,38 +88,26 @@ export function AuthForm({ type }: AuthFormProps) {
             )}
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <EnvelopeIcon className="h-5 w-5 text-gray-400" />
-                </div>
-                <Input
+              <div className="flex items-center border rounded-lg overflow-hidden p-2">
+                <EnvelopeIcon className="h-5 w-5 text-gray-400 mr-3" />
+                <input
                   type="email"
-                  label="Email Address"
-                  size="lg"
+                  placeholder="Email Address"
+                  className="w-full p-2 outline-none bg-transparent"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10"
-                  containerProps={{
-                    className: "min-w-0",
-                  }}
                   required
                 />
               </div>
 
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <LockClosedIcon className="h-5 w-5 text-gray-400" />
-                </div>
-                <Input
+              <div className="flex items-center border rounded-lg overflow-hidden p-2">
+                <LockClosedIcon className="h-5 w-5 text-gray-400 mr-3" />
+                <input
                   type="password"
-                  label="Password"
-                  size="lg"
+                  placeholder="Password"
+                  className="w-full p-2 outline-none bg-transparent"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="pl-10"
-                  containerProps={{
-                    className: "min-w-0",
-                  }}
                   required
                 />
               </div>
@@ -128,7 +116,7 @@ export function AuthForm({ type }: AuthFormProps) {
                 type="submit"
                 size="lg"
                 color="teal"
-                className="mt-2"
+                className="mt-2 rounded-lg shadow-md"
                 fullWidth
               >
                 {type === 'login' ? 'Sign In' : 'Create Account'}
@@ -152,7 +140,7 @@ export function AuthForm({ type }: AuthFormProps) {
                   size="lg"
                   fullWidth
                   onClick={handleTestLogin}
-                  className="flex items-center justify-center gap-3"
+                  className="flex items-center justify-center gap-3 rounded-lg shadow-md"
                 >
                   Test Account
                 </Button>
